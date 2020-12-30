@@ -1,10 +1,13 @@
-import React from 'react';
-import DivTwo from "./divTwo";
+import React from "react";
+import DivThree from "./divThree"
 
-const DivOne = (props) => {
+const DivTwo = (props) => {
     return (
-        <DivTwo tardis={props.tardis} />
-    )
-}
+        <div>
+            <DivThree tardis={props.tardis} />
+            <DivThree tardis={props.tardis} />
+        </div>
+    );
+};
 
-export default DivOne;
+export default DivTwo;

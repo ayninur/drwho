@@ -1,20 +1,21 @@
-import React from 'react';
+import React from "react";
 
 const DivThree = (props) => {
-    const [state, setState] = React.useState(props.tardis);
+
+    const [who, setWho] = React.useState(props.tardis);
 
     const changeIt = () => {
-        if (state.tardis.caps) {
-            setState({
+        if (who.tardis.caps) {
+            setWho({
                 tardis: {
-                    name: state.tardis.name.toLowerCase(),
+                    name: who.tardis.name.toLowerCase(),
                     caps: false
                 }
             });
         } else {
-            setState({
+            setWho({
                 tardis: {
-                    name: state.tardis.name.toUpperCase(),
+                    name: who.tardis.name.toUpperCase(),
                     caps: true
                 }
             });
@@ -23,10 +24,9 @@ const DivThree = (props) => {
 
     return (
         <div>
-            <h3 onClick={changeIt}>{state.tardis.name}</h3>
+            <h3 onClick={changeIt}>{who.tardis.name}</h3>
         </div>
-    )
-}
+    );
+};
 
-
-export default DivThree
+export default DivThree;

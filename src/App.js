@@ -1,27 +1,20 @@
-import React from 'react';
-// import logo from './logo.svg';
-import './App.css';
-import divOne from './components/divOne';
+import React from "react";
+import "./App.css";
+import DivOne from "./components/divOne";
 
 const App = (props) => {
-
-  const [state, setState] = React.useState({
+  const [who, setWho] = React.useState({
     tardis: {
       name: "Time and Relative Dimension in Space",
       caps: false
     }
-  })
-
-
+  });
 
   return (
-    <div className="App">
-      {/* what is the purpose of tardis */}
-      <divOne tardis={state} />
+    <div>
+      <DivOne tardis={who} />
     </div>
-  )
-}
-
-
+  );
+};
 
 export default App;
